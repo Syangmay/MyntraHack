@@ -66,6 +66,13 @@ def menjackets9():
 def menjackets10():
     return render_template("menjackets10.html")
 
+@app.route('/bodytype')
+def bodytype():
+    return render_template("bodytype.html")
+
+@app.route('/end')
+def end():
+    return render_template("end.html")
 
 
 
