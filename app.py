@@ -109,9 +109,38 @@ def menjeans7():
     return render_template("menjeans7.html")
 
 
+
+
+
+
 @app.route('/menshirt')
 def menshirt():
     return render_template("menshirt.html")
+
+@app.route('/menshirt1')
+def menshirt1():
+    return render_template("menshirt1.html")
+
+@app.route('/menshirt2')
+def menshirt2():
+    return render_template("menshirt2.html")
+
+@app.route('/menshirt3')
+def menshirt3():
+    return render_template("menshirt3.html")
+
+@app.route('/menshirt4')
+def menshirt4():
+    return render_template("menshirt4.html")
+
+@app.route('/menshirt5')
+def menshirt5():
+    return render_template("menshirt5.html")
+
+
+
+
+
 
 @app.route('/mentshirt')
 def mentshirt():
