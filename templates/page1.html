@@ -3,17 +3,17 @@
 <html>
 <head>
 <title>Hamro Store</title>
-<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
-<link href="css/style.css" rel='stylesheet' type='text/css' />
+<link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel='stylesheet' type='text/css' />
+<link href="{{ url_for('static', filename='css/style.css') }}" rel='stylesheet' type='text/css' />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<script src="js/jquery.min.js"></script>
+<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
 
 <link rel="stylesheet" href="css/fwslider.css" media="all">
-<script src="js/jquery-ui.min.js"></script>
-<script src="js/fwslider.js"></script>
+<script src="{{ url_for('static', filename='js/jquery-ui.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/fwslider.js') }}"></script>
 
 
 </head>
@@ -24,18 +24,18 @@
 			  <div class="col-md-12">
 				 <div class="header-left">
 					 <div class="logo">
-						<a href="index.html"><img src="images/logo1.png" width="125px" height="50px" alt=""/></a>
+						<a href={{ url_for('index') }}><img src={{ url_for('static', filename="images/logo1.png") }} width="125px" height="50px" alt=""/></a>
 					 </div>
-					 						
+
 	    		    <div class="clear"></div>
 	    	    </div>
-	            
+
 	      </div>
 		 </div>
 	    </div>
 	</div>
 	<div style="text-align: center;margin-top: 8%">
-		<img src="images/clock.jpg" width="75px" height="75px">
+		<img src={{ url_for('static', filename="images/clock.jpg") }} width="75px" height="75px">
 		<br>
 		<br>
 		<p><b>Are you willing to make some effort to help us build <br>a personalized wardrobe?</b></p>
@@ -44,11 +44,11 @@
 		<button style="border-color: red;background-color: white;padding-left: 75px;padding-right: 75px;color: red"><b><a style="color: red" href="https://www.myntra.com">No</a></b></button>
 
 	</div>
-	
-      
-	  
-	
-	
-		
-</body>	
+
+
+
+
+
+
+</body>
 </html>

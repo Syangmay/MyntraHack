@@ -3,17 +3,17 @@
 <html>
 <head>
 <title>Hamro Store</title>
-<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
-<link href="css/style.css" rel='stylesheet' type='text/css' />
+<link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel='stylesheet' type='text/css' />
+<link href="{{ url_for('static', filename='css/style.css') }}" rel='stylesheet' type='text/css' />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<script src="js/jquery.min.js"></script>
+<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
 
-<link rel="stylesheet" href="css/fwslider.css" media="all">
-<script src="js/jquery-ui.min.js"></script>
-<script src="js/fwslider.js"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/fwslider.css') }}" media="all">
+<script src="{{ url_for('static', filename='js/jquery-ui.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/fwslider.js') }}"></script>
 
 
 </head>
@@ -24,10 +24,10 @@
 			  <div class="col-md-12">
 				 <div class="header-left">
 					 <div class="logo">
-						<a href="index.html"><img src="images/logo.png" width="50px" height="50px" alt=""/></a>
+						<a href={{ url_for('index') }}><img src= width="50px" height="50px" alt=""/></a>
 					 </div>
 					 <div class="menu">
-						  <a class="toggleMenu" href="#"><img src="images/nav.png" alt="" /></a>
+						  <a class="toggleMenu" href="#"><img src={{ url_for('static', filename="images/nav.png") }} alt="" /></a>
 						    <ul class="nav" id="nav">
 						    	<li><a href="men.html"><b>Men</b></a></li>
 						    	<li><a href="women.html"><b>Women</b></a></li>
@@ -35,7 +35,7 @@
 
 								<div class="clear"></div>
 							</ul>
-							<script type="text/javascript" src="js/responsive-nav.js"></script>
+							<script type="text/javascript" src="{{ url_for('static', filename='js/responsive-nav.js') }}"></script>
 				    </div>
 	    		    <div class="clear"></div>
 	    	    </div>
@@ -60,7 +60,7 @@
 
                         <h1 style="text-align: center; font-family:Open Sans"><b>Fashion is like eating, you shouldn't stick to the same menu.</b></h1>
                         <button style="background: #000;border-radius: 20px;	border: none;color:#fff;font-size:0.85em;text-transform:uppercase;font-weight:800;display: inline-block;padding:10px 10px;cursor: pointer;
-"><a href="page1.html" style="text-decoration: none;color: white">Build Your Own Menu</a></button>
+"><a href={{ url_for('begin') }} style="text-decoration: none;color: white">Build Your Own Menu</a></button>
                     </div>
                 </div>
             </div>
