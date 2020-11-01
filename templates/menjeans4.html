@@ -37,16 +37,25 @@
 	<div style="text-align: center;margin-top: 5%">
 		<h3><b>Waise Rise</b></h3>
 		<br>
+		<form action="{{ url_for('menjeans5') }}">
 		<figure>
-			<a href={{ url_for('menjeans5') }}><img src={{ url_for('static', filename="images/lowrise.png") }}></a>
-			<a href={{ url_for('menjeans5') }}><img src={{ url_for('static', filename="images/midrise.png") }}></a>
-			<a href={{ url_for('menjeans5') }}><img src={{ url_for('static', filename="images/highrise.png") }}></a>
+			<a ><img src={{ url_for('static', filename="images/lowrise.png") }}></a>
+			<a ><img src={{ url_for('static', filename="images/midrise.png") }}></a>
+			<a ><img src={{ url_for('static', filename="images/highrise.png") }}></a>
 
 
 		</figure>
-		<a href={{ url_for('menjeans5') }} style="background-color: white;padding-left: 80px;padding-right: 80px;border-radius: 12px;margin-right: 10px;border: solid 1px black;color: black;text-decoration: none;">Low Rise</a>
-		<a href={{ url_for('menjeans5') }}  style="background-color: white;padding-left: 80px;padding-right: 80px;border-radius: 12px;margin-right: 10px;border: solid 1px black;color: black;text-decoration: none">Mid Rise</a>
-		<a href={{ url_for('menjeans5') }}  style="background-color: white;padding-left: 80px;padding-right: 80px;border-radius: 12px;margin-right: 10px;border: solid 1px black;color: black;text-decoration: none">High Rise</a>
+		<a style="background-color: white;padding-left: 80px;padding-right: 80px;border-radius: 12px;margin-right: 10px;border: solid 1px black;color: black;text-decoration: none;">Low Rise<input type="checkbox" name="lowrise" value="lowrise"></a>
+		<a  style="background-color: white;padding-left: 80px;padding-right: 80px;border-radius: 12px;margin-right: 10px;border: solid 1px black;color: black;text-decoration: none">Mid Rise<input type="checkbox" name="lowrise" value="lowrise"></a>
+		<a  style="background-color: white;padding-left: 80px;padding-right: 80px;border-radius: 12px;margin-right: 10px;border: solid 1px black;color: black;text-decoration: none">High Rise<input type="checkbox" name="lowrise" value="lowrise"></a>
+
+		<br>
+		<br>
+		<a style="color: red" href={{ url_for('menjeans5') }}><button style="border-color: red;background-color: white;padding-left: 100px;padding-right: 100px;color: red;margin-right: 20px"><b>Next</b></button></a>
+
+		<br>
+		<br>
+	</form>
 
 
 
