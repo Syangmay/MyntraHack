@@ -34,7 +34,7 @@
 		 </div>
 	    </div>
 	</div>
-	<form method="POST" action = "{{ url_for('menjackets3', attr=attr, count=count)}}">
+	<form method="POST" action = "{{ url_for('menjackets3')}}">
 	<div class = "form-group" style="width:60%; text-align: center;margin-top: 5%; margin-left:20%; margin-right:50%">
 		<img src={{ url_for('static', filename="images/weather.png") }} width="100px" height="100px">
 		<h3><b>Do you intend to wear it in extreme weather conditions?</b></h3>
@@ -47,7 +47,7 @@
     </div>
 
 		<br>
-		
+
 		<input class="btn btn-primary" type="submit" value="submit">
 
 

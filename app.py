@@ -2,11 +2,13 @@ from flask import Flask, request, render_template, render_template_string
 
 import pandas as pd
 
-
 mjackets = {}
 mjeans = {}
 mshirts = {}
 mtshirts = {}
+
+jackets = []
+jacketcount = [0] * 15
 
 
 app = Flask(__name__)
@@ -34,39 +36,94 @@ def men():
 
 @app.route('/menjackets', methods=['get','post'])
 def menjackets():
-    return render_template("menjackets.html", attr = [], count = [])
+    return render_template("menjackets.html")
 
 @app.route('/menjackets2', methods=['get','post'])
 def menjackets2():
-    attr = []
-    count = []
-    return render_template("menjackets2.html", attr = attr, count = count)
+    return render_template("menjackets2.html")
 
 @app.route('/menjackets3', methods=['get','post'])
 def menjackets3():
     if request.method == 'POST':
-        gender = request.form.get('gender')
-        print(gender)
-    attr = []
-    count = []
-    return render_template("menjackets3.html", attr = attr, count = count)
+        weather = request.form.get('gender')
 
-@app.route('/menjackets4')
+        if weather == "yes" :
+            attributes = ["Quilted" , "Bomber", "Puffer" , "Padded" , "Leather", "Full Sleeve"]
+            for i in range(len(attributes)):
+                if attributes[i] not in jackets:
+                    jackets.append(attributes[i])
+                jacketcount[jackets.index(attributes[i])] += 1
+        print("weather:")
+        print(jackets)
+        print(jacketcount)
+
+    return render_template("menjackets3.html")
+
+@app.route('/menjackets4', methods=['get','post'])
 def menjackets4():
-    attr = []
-    count = []
-    return render_template("menjackets4.html", attr = attr, count = count)
+    if request.method == 'POST':
+        biking = request.form.get('biking')
+        attributes = ["Bomber", "Leather"]
 
-@app.route('/menjackets5')
+        if biking == "often" :
+            for i in range(len(attributes)):
+                if attributes[i] not in jackets:
+                    jackets.append(attributes[i])
+                jacketcount[jackets.index(attributes[i])] += 1
+        elif biking=="sometimes":
+            for i in range(len(attributes)):
+                if attributes[i] not in jackets:
+                    jackets.append(attributes[i])
+                jacketcount[jackets.index(attributes[i])] += 0.5
+    print("biking:")
+    print(jackets)
+    print(jacketcount)
+    return render_template("menjackets4.html")
+
+@app.route('/menjackets5', methods=['get','post'])
 def menjackets5():
-    attr = []
-    count = []
+    if request.method == 'POST':
+        sports = request.form.get('sports')
+
+        if sports == "yes" :
+            attributes = ["Sporty"]
+            for i in range(len(attributes)):
+                if attributes[i] not in jackets:
+                    jackets.append(attributes[i])
+                jacketcount[jackets.index(attributes[i])] += 1
+
+        print("sports:")
+        print(jackets)
+        print(jacketcount)
+
     return render_template("menjackets5.html")
 
-@app.route('/menjackets6')
+@app.route('/menjackets6', methods=['get','post'])
 def menjackets6():
-    attr = []
-    count = []
+
+    if request.method == 'POST':
+        party = request.form.get('party')
+        attributes = ["Tailored" , "Bomber", "Denim", "Leather"]
+
+        if party == "often" :
+            for i in range(len(attributes)):
+                if attributes[i] not in jackets:
+                    jackets.append(attributes[i])
+                jacketcount[jackets.index(attributes[i])] += 1
+        elif party=="sometimes":
+            for i in range(len(attributes)):
+                if attributes[i] not in jackets:
+                    jackets.append(attributes[i])
+                jacketcount[jackets.index(attributes[i])] += 0.5
+        elif party=="rarely":
+            for i in range(len(attributes)):
+                if attributes[i] not in jackets:
+                    jackets.append(attributes[i])
+                jacketcount[jackets.index(attributes[i])] += 0.25
+
+    print("party:")
+    print(jackets)
+    print(jacketcount)
     return render_template("menjackets6.html")
 
 @app.route('/menjackets7')
