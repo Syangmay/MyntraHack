@@ -1,0 +1,65 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Myntra Hacks</title>
+<link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel='stylesheet' type='text/css' />
+<link href="{{ url_for('static', filename='css/style.css') }}" rel='stylesheet' type='text/css' />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/fwslider.css') }}" media="all">
+<script src="{{ url_for('static', filename='js/jquery-ui.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/fwslider.js') }}"></script>
+
+
+</head>
+<body>
+	<div class="header">
+		<div class="container">
+			<div class="row">
+			  <div class="col-md-12">
+				 <div class="header-left">
+					 <div class="logo">
+						<a href="index.html"><img src={{ url_for('static', filename="images/logo1.png") }} width="125px" height="50px" alt=""/></a>
+					 </div>
+
+	    		    <div class="clear"></div>
+	    	    </div>
+
+	      </div>
+		 </div>
+	    </div>
+	</div>
+	<div style="text-align: center;margin-top: 8%">
+		<h3><b>Which brand would you prefer?</b></h3>
+		<br>
+		<br>
+		<figure>
+			<a href={{ url_for('bodytype') }}><img src={{ url_for('static', filename="images/roadster.jpg") }} width="200px" height="300px"></a>
+			<a href={{ url_for('bodytype') }}><img src={{ url_for('static', filename="images/max.png") }}  width="200px" height="175px"></a>
+			<a href={{ url_for('bodytype') }}><img src={{ url_for('static', filename="images/hrx.jpg") }}  width="200px" height="300px"></a>
+			
+		</figure>
+		<figure>
+			<a href={{ url_for('bodytype') }}><img src={{ url_for('static', filename="images/klein.jpg") }}  width="200px" height="200px"></a>
+			<a href={{ url_for('bodytype') }}><img src={{ url_for('static', filename="images/hnm.jpg") }}  width="200px" height="175px"></a>
+			<a href={{ url_for('bodytype') }}><img src={{ url_for('static', filename="images/uspolo.jfif") }}  width="200px" height="200px"></a>
+
+
+		</figure>
+		
+		<br><br>
+		
+		
+		
+		<br><br>
+
+	</div>
+
+
+</body>
+</html>
