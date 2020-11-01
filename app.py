@@ -104,10 +104,6 @@ def menjeans5():
 def menjeans6():
     return render_template("menjeans6.html")
 
-@app.route('/menjeans7')
-def menjeans7():
-    return render_template("menjeans7.html")
-
 
 
 

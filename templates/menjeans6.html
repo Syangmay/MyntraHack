@@ -2,19 +2,18 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Hamro Store</title>
-<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
-<link href="css/style.css" rel='stylesheet' type='text/css' />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<script src="js/jquery.min.js"></script>
+	<title>MyntraHack</title>
+	<link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel='stylesheet' type='text/css' />
+	<link href="{{ url_for('static', filename='css/style.css') }}" rel='stylesheet' type='text/css' />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
 
-<link rel="stylesheet" href="css/fwslider.css" media="all">
-<script src="js/jquery-ui.min.js"></script>
-<script src="js/fwslider.js"></script>
-
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/fwslider.css') }}" media="all">
+	<script src="{{ url_for('static', filename='js/jquery-ui.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/fwslider.js') }}"></script>
 
 </head>
 <body>
@@ -24,49 +23,49 @@
 			  <div class="col-md-12">
 				 <div class="header-left">
 					 <div class="logo">
-						<a href="index.html"><img src="images/logo1.png" width="125px" height="50px" alt=""/></a>
+						<a href={{ url_for('index') }}><img src={{ url_for('static', filename="images/logo1.png") }} width="150px" height="50px" alt=""/></a>
 					 </div>
-					 						
+
 	    		    <div class="clear"></div>
 	    	    </div>
-	            
+
 	      </div>
 		 </div>
 	    </div>
 	</div>
 	<div style="text-align: center;margin-top: 5%">
-		
-		
+
+
 		<h3><b>Which brand do you prefer?</b></h3>
 		<br>
 		<figure>
-			<a href="end.html"><img src="images/roadster.jpg"  width="200px" height="200px"></a>
-			<a href="end.html"><img src="images/wrogn.jpg"  width="200px" height="150px"></a>
-			<a href="end.html"><img src="images/levis.png"  width="200px" height="150px"></a>
-			
+			<a href={{ url_for('end') }}><img src={{ url_for('static', filename="images/roadster.jpg") }}  width="200px" height="200px"></a>
+			<a href={{ url_for('end') }}><img src={{ url_for('static', filename="images/wrogn.jpg") }}  width="200px" height="150px"></a>
+			<a href={{ url_for('end') }}><img src={{ url_for('static', filename="images/levis.png") }}  width="200px" height="150px"></a>
+
 		</figure>
 		<figure>
-			<a href="end.html"><img src="images/hrx.jpg"  width="200px" height="200px"></a>
-			<a href="end.html"><img src="images/celio.png"  width="200px" height="200px"></a>
-			<a href="end.html"><img src="images/jack.png"  width="200px" height="200px"></a>
+			<a href={{ url_for('end') }}><img src={{ url_for('static', filename="images/hrx.jpg") }}  width="200px" height="200px"></a>
+			<a href={{ url_for('end') }}><img src={{ url_for('static', filename="images/celio.png") }}  width="200px" height="200px"></a>
+			<a href={{ url_for('end') }}><img src={{ url_for('static', filename="images/jack.png") }}  width="200px" height="200px"></a>
 
 		</figure>
 
 
-		
 
 
 
-		
 
 
-		
+
+
+
 	</div>
-	
-      
-	  
-	
-	
-		
-</body>	
+
+
+
+
+
+
+</body>
 </html>
