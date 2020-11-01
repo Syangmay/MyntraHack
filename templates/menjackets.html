@@ -14,9 +14,41 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='css/fwslider.css') }}" media="all">
 <script src="{{ url_for('static', filename='js/jquery-ui.min.js') }}"></script>
 <script src="{{ url_for('static', filename='js/fwslider.js') }}"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}" media="all">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" media="all">
+
+
+
+<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+
 
 
 </head>
+
+	<style type="text/css">
+.nopad {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+/*image gallery*/
+.image-checkbox {
+  cursor: pointer;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: 4px solid transparent;
+  margin-bottom: 0;
+  outline: 0;
+}
+.image-checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.image-checkbox-checked {
+  border-color: #4783b0;
+}
+</style>
 <body>
 	<div class="header">
 		<div class="container">
@@ -24,7 +56,7 @@
 			  <div class="col-md-12">
 				 <div class="header-left">
 					 <div class="logo">
-						<a href={{ url_for('index') }}><img src={{ url_for('static', filename="images/logo1.png") }} width="50px" height="50px" alt=""/></a>
+						<a href={{ url_for('index') }}><img src={{ url_for('static', filename="images/logo1.png") }} width="100px" height="50px" alt=""/></a>
 					 </div>
 
 	    		    <div class="clear"></div>
@@ -34,33 +66,89 @@
 		 </div>
 	    </div>
 	</div>
+	
+
+</div>
+
 	<div style="text-align: center;margin-top: 1%">
 		<h3><b>Which outfits would you wear?</b></h3>
 		<br>
 		<br>
-		<figure>
-			<a href=""><img src={{ url_for('static', filename="images/jacket1.jpeg" ) }} width="225px" height="300px"></a>
-			<a href=""><img src={{ url_for('static', filename="images/jacket2.jpeg" ) }} width="225px" height="300px"></a>
-			<a href=""><img src={{ url_for('static', filename="images/jacket3.jpeg" ) }} width="225px" height="300px"></a>
-		</figure>
-		<br>
-		<figure>
-			<a href=""><img src={{ url_for('static', filename="images/jacket4.jpeg" ) }} width="225px" height="300px"></a>
-			<a href=""><img src={{ url_for('static', filename="images/jacket5.jpeg" ) }} width="225px" height="300px"></a>
-			<a href=""><img src={{ url_for('static', filename="images/jacket6.jpeg" ) }} width="225px" height="300px"></a>
-		</figure>
+<form action="{{ url_for('menjackets2') }}" >
+<div class="container" style="margin-left: 25%">
+
+  <div class="col-xs-4 col-sm-3 col-md-2 nopad text-center">
+    <label class="image-checkbox">
+      <img class="img-responsive" src={{ url_for('static', filename="images/jacket1.jpeg" ) }}  />
+      <input type="checkbox" name="image[]" value="jacket1" />
+      <i class="fa fa-check hidden"></i>
+    </label>
+  </div>
+  <div class="col-xs-4 col-sm-3 col-md-2 nopad text-center">
+    <label class="image-checkbox">
+      <img class="img-responsive"  src={{ url_for('static', filename="images/jacket2.jpeg" ) }} />
+      <input type="checkbox" name="image[]" value="jacket2" />
+      <i class="fa fa-check hidden"></i>
+    </label>
+  </div>
+  <div class="col-xs-4 col-sm-3 col-md-2 nopad text-center">
+    <label class="image-checkbox">
+      <img class="img-responsive"  src={{ url_for('static', filename="images/jacket3.jpeg" ) }} />
+      <input type="checkbox" name="image[]" value="jacket3" />
+      <i class="fa fa-check hidden"></i>
+    </label>
+  </div>
+</div>
+<div class="container" style="margin-left: 25%">
+  <div class="col-xs-4 col-sm-3 col-md-2 nopad text-center">
+    <label class="image-checkbox">
+      <img class="img-responsive"  src={{ url_for('static', filename="images/jacket4.jpeg" ) }} />
+      <input type="checkbox" name="image[]" value="jacket4" />
+      <i class="fa fa-check hidden"></i>
+    </label>
+  </div>
+  <div class="col-xs-4 col-sm-3 col-md-2 nopad text-center">
+    <label class="image-checkbox">
+      <img class="img-responsive"  src={{ url_for('static', filename="images/jacket5.jpeg" ) }} />
+      <input type="checkbox" name="image[]" value="jacket5" />
+      <i class="fa fa-check hidden"></i>
+    </label>
+  </div>
+  <div class="col-xs-4 col-sm-3 col-md-2 nopad text-center">
+    <label class="image-checkbox">
+      <img class="img-responsive"  src={{ url_for('static', filename="images/jacket6.jpeg" ) }} />
+      <input type="checkbox" name="image[]" value="jacket6" />
+      <i class="fa fa-check hidden"></i>
+    </label>
+  </div>
+</div>
 		<br>
 		<br>
 
 		<a style="color: red" href={{ url_for('menjackets2') }}><button style="border-color: red;background-color: white;padding-left: 100px;padding-right: 100px;color: red;margin-right: 20px"><b>Next</b></button></a>
 		<br><br>
-
-	</div>
-
-
-
-
-
+</form>
+</div>
 
 </body>
+<script type="text/javascript">
+
+$(".image-checkbox").each(function () {
+  if ($(this).find('input[type="checkbox"]').first().attr("checked")) {
+    $(this).addClass("image-checkbox-checked");
+  } else {
+    $(this).removeClass("image-checkbox-checked");
+  }
+});
+
+// sync the state to the input
+$(".image-checkbox").on("click", function (e) {
+  $(this).toggleClass("image-checkbox-checked");
+  var $checkbox = $(this).find('input[type="checkbox"]');
+  $checkbox.prop("checked", !$checkbox.prop("checked"));
+
+  e.preventDefault();
+});
+
+</script>
 </html>
