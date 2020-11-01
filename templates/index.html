@@ -29,9 +29,9 @@
 					 <div class="menu">
 						  <a class="toggleMenu" href="#"><img src={{ url_for('static', filename="images/nav.png") }} alt="" /></a>
 						    <ul class="nav" id="nav">
-						    	<li><a href="men.html"><b>Men</b></a></li>
-						    	<li><a href="women.html"><b>Women</b></a></li>
-						    	<li><a href="aboutus.html"><b>About Us</b></a></li>
+						    	<li><a href={{ url_for('men') }}><b>Men</b></a></li>
+						    	<li><a href={{ url_for('women') }}><b>Women</b></a></li>
+						    	<li><a href={{ url_for('aboutus') }}><b>About Us</b></a></li>
 
 								<div class="clear"></div>
 							</ul>
