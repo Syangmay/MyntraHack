@@ -126,7 +126,7 @@ def menjackets6():
     print(jacketcount)
     return render_template("menjackets6.html")
 
-@app.route('/menjackets7')
+@app.route('/menjackets7', methods=['get','post'])
 def menjackets7():
     if request.method == 'POST':
         formal = request.form.get('formal')
@@ -143,19 +143,19 @@ def menjackets7():
 
     return render_template("menjackets7.html")
 
-@app.route('/menjackets8')
+@app.route('/menjackets8', methods=['get','post'])
 def menjackets8():
     attr = []
     count = []
     return render_template("menjackets8.html")
 
-@app.route('/menjackets9')
+@app.route('/menjackets9', methods=['get','post'])
 def menjackets9():
     attr = []
     count = []
     return render_template("menjackets9.html")
 
-@app.route('/menjackets10')
+@app.route('/menjackets10', methods=['get','post'])
 def menjackets10():
     if request.method == 'POST':
         closure = request.form.get('prefer')
@@ -169,10 +169,25 @@ def menjackets10():
         print(jacketcount)
     return render_template("menjackets10.html")
 
-@app.route('/bodytype')
+@app.route('/bodytype', methods=['get','post'])
 def bodytype():
-    attr = []
-    count = []
+    if request.method == 'POST':
+        pockets = request.form.get('pockets')
+        attributes = ["Tailored" , "Bomber", "Denim", "Leather"]
+
+        if pockets == "lots" :
+            if "Pockets" not in jackets:
+                jackets.append("Pockets")
+            jacketcount[jackets.index(attributes[i])] += 2
+        elif pockets=="few":
+            for i in range(len(attributes)):
+                if attributes[i] not in jackets:
+                    jackets.append(attributes[i])
+                jacketcount[jackets.index(attributes[i])] += 1
+
+    print("pockets:")
+    print(jackets)
+    print(jacketcount)
     return render_template("bodytype.html")
 
 @app.route('/end')

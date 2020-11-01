@@ -34,37 +34,27 @@
 		 </div>
 	    </div>
 	</div>
-	<div style="text-align: center;margin-top: 5%">
-		<img src={{ url_for('static', filename="images/wine.png") }} width="200px" height="100px">
-		<br>
-		<br>
+
+	<form method="POST" action = "{{ url_for('bodytype')}}">
+	<div class = "form-group" style="width:60%; text-align: center;margin-top: 5%; margin-left:20%; margin-right:50%">
+		<img src={{ url_for('static', filename="images/person.png") }} width="100px" height="100px">
 		<h3><b>How do you carry your belongings?</b></h3>
 		<br>
 
-		<a href={{ url_for('bodytype') }} style="background-color: white;padding-left: 50px;padding-right: 50px;;margin-left: -5px;border-radius: 12px;margin-right: 10px;border: solid 2px black;color: black;text-decoration: none;"><b>Befriend second person with a bag</b></a>
 
+		<div class="radio" style="margin-left:10%; padding-right:-400px; "checked>
+        <label><input type="radio" name="pockets" value="lots"><b>I stuff things in my pocket</b></label><br>
+				<label><input type="radio" name="pockets" value="few"><b>I usually carry a bag.</b></label><br>
+				<label><input type="radio" name="pockets" value="none"><b>Befriend second person with a bag</b></label><br>
+				<label><input type="radio" name="pockets" value="no"><b>I don't carry much</b></label>
+    </div>
 		<br>
-		<br>
-		<a href={{ url_for('bodytype') }} style="background-color: white;padding-left: 50px;padding-right: 50px;;margin-left: -5px;border-radius: 12px;margin-right: 10px;border: solid 2px black;color: black;text-decoration: none;"><b>I stuff things in my pocket</b></a>
-		<br>
-		<br>
-		<a href={{ url_for('bodytype') }} style="background-color: white;padding-left: 50px;padding-right: 50px;;margin-left: -5px;border-radius: 12px;margin-right: 10px;border: solid 2px black;color: black;text-decoration: none;"><b>I usually carry a bag.</b></a>
-		<br>
-		<br>
-		<a href={{ url_for('bodytype') }} style="background-color: white;padding-left: 50px;padding-right: 50px;;margin-left: -5px;border-radius: 12px;margin-right: 10px;border: solid 2px black;color: black;text-decoration: none;"><b>I don't carry much</b></a>
 
-
-
-
-
+		<input class="btn btn-primary" type="submit" value="submit">
 
 
 	</div>
-
-
-
-
-
+ </form>
 
 </body>
 </html>
