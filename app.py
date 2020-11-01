@@ -17,5 +17,9 @@ def begin():
 def gender():
     return render_template("gender.html")
 
+@app.route('/men')
+def men():
+    return render_template("men.html")
+
 if __name__ == "__main__":
     app.run(debug=True)
