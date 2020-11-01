@@ -121,5 +121,37 @@ def mentshirt():
 def women():
     return render_template("women.html")
 
+@app.route('/womenjumpsuit')
+def womenjumpsuit():
+    return render_template("womenjumpsuit.html")
+
+@app.route('/womenjeans')
+def womenjeans():
+    return render_template("womenjeans.html")
+
+@app.route('/womenjumpsuit1')
+def womenjumpsuit1():
+    return render_template("womenjumpsuit1.html")
+
+@app.route('/womenjumpsuit2')
+def womenjumpsuit2():
+    return render_template("womenjumpsuit2.html")
+
+@app.route('/womenjumpsuit3')
+def womenjumpsuit3():
+    return render_template("womenjumpsuit3.html")
+
+@app.route('/womenjumpsuit4')
+def womenjumpsuit4():
+    return render_template("womenjumpsuit4.html")
+
+@app.route('/womenjumpsuit5')
+def womenjumpsuit5():
+    return render_template("womenjumpsuit5.html")
+
+@app.route('/womenjumpsuit6')
+def womenjumpsuit6():
+    return render_template("womenjumpsuit6.html")
+
 if __name__ == "__main__":
     app.run(debug=True)
