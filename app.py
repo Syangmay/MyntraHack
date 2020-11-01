@@ -1,4 +1,5 @@
 from flask import Flask, request, render_template, render_template_string
+from jacket import getjackets
 
 import pandas as pd
 
@@ -21,11 +22,18 @@ def index():
 def begin():
     return render_template("page1.html")
 
-
 @app.route('/gender')
 def gender():
     return render_template("gender.html")
 
+@app.route('/products')
+def products():
+    title, productid, name, price = getjackets(jackets, jacketcount)
+    productId = [str(i) for i in productid]
+    length = len(title)
+    print(title)
+
+    return render_template("productlist.html", title=title, productid=productId, name=name, price=price, length=length)
 
 
 @app.route('/men')

@@ -1,7 +1,7 @@
 import pandas as pd
 
 
-def jackets(attr, count):
+def getjackets(attr, count):
     dfjackets = pd.read_csv('data/mjackets.csv')
 
     del dfjackets['Waist Rise']
@@ -65,4 +65,4 @@ def jackets(attr, count):
 
 
 #att=['Zip','Button','Solid','Colourblocked','Self Design','Bomber','Sporty Jacket','Padded Jacket','Denim Jacket','Tailored Jacket','Puffer Jacket','Quilted Jacket','Biker Jacket','Leather Jacket',
-     'Polyester','Unlined','Cotton','Fleece','Nylon','Polycotton','Sleeveless ','Long Sleeves']
+     #'Polyester','Unlined','Cotton','Fleece','Nylon','Polycotton','Sleeveless ','Long Sleeves']

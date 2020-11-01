@@ -56,7 +56,7 @@
         <div class="col-md-12">
          <div class="header-left">
            <div class="logo">
-            <a href={{ url_for('index') }}><img src={{ url_for('static', filename="images/logo1.png") }} width="100px" height="50px" alt=""/></a>
+            <a href={{ url_for('index') }}><img src={{ url_for('static', filename="images/logo1.png") }} width="150px" height="50px" alt=""/></a>
            </div>
 
               <div class="clear"></div>
@@ -66,99 +66,29 @@
      </div>
       </div>
   </div>
-  
 
 
 
-  <div >
-      <h3 style="text-align: center;font-family: sans-serif;color: red">Product list</h3>
-     
-                <div style="border:solid 1px #aaa;width: 250px ; height: 350px; margin: 35px;float:left; text-align: center;">
-               <img src={{ url_for('static', filename="images/shirt1.jpeg") }} width="250px" height="200px" >
-         <br>
-         <b><p style="font-family: sans-serif; text-align: center;"><span>Product 1</span><br><br>
-          MPR - Rs Price <span></span><br>
+
+  <div style="margin-left:60px">
+      <h3 style="text-align: center;font-family:sans-serif;font-weight:bold;">Personalised Jacket Recommendation</h3>
 
 
-         </p></b>
-         <a href=""><button>Buy Now</button></a>
-        </div>
-
-         <div style="border:solid 1px #aaa;width: 250px ; height: 350px; margin: 35px;float:left; text-align: center;">
-               <img src={{ url_for('static', filename="images/shirt1.jpeg") }} width="250px" height="200px" >
-         <br>
-         <b><p style="font-family: sans-serif; text-align: center;"><span>Product 1</span><br><br>
-          MPR - Rs Price <span></span><br>
-
-
-         </p></b>
-         <a href=""><button>Buy Now</button></a>
-        </div>
-         <div style="border:solid 1px #aaa;width: 250px ; height: 350px; margin: 35px;float:left; text-align: center;">
-               <img src={{ url_for('static', filename="images/shirt1.jpeg") }} width="250px" height="200px" >
-         <br>
-         <b><p style="font-family: sans-serif; text-align: center;"><span>Product 1</span><br><br>
-          MPR - Rs Price <span></span><br>
+          {% for i in range(length) %}
+                <div style="border:solid 1px #aaa;width: 250px ; height: 450px; margin: 35px;float:left; text-align: center;">
+                     <img src={{ url_for('static', filename="mjackets/" + productid[i] + "_1.JPG") }} width="250px" height="300px" >
+               <br>
+               <p style="font-family: sans-serif; padding-top:10px; text-align: center;"><span><b>{{ title[i] }}</b></span></p>
+               <br>
+                <p style="padding-left:10px; padding-top:-20px; text-align: left"> {{ name[i] }}
+                <br>
+                 MRP -<i> {{ price[i] }}  </i></p>
+              </div>
+            {% endfor %}
 
 
-         </p></b>
-         <a href=""><button>Buy Now</button></a>
-        </div>
-         <div style="border:solid 1px #aaa;width: 250px ; height: 350px; margin: 35px;float:left; text-align: center;">
-               <img src={{ url_for('static', filename="images/shirt1.jpeg") }} width="250px" height="200px" >
-         <br>
-         <b><p style="font-family: sans-serif; text-align: center;"><span>Product 1</span><br><br>
-          MPR - Rs Price <span></span><br>
 
-
-         </p></b>
-         <a href=""><button>Buy Now</button></a>
-        </div>
-         <div style="border:solid 1px #aaa;width: 250px ; height: 350px; margin: 35px;float:left; text-align: center;">
-               <img src={{ url_for('static', filename="images/shirt1.jpeg") }} width="250px" height="200px" >
-         <br>
-         <b><p style="font-family: sans-serif; text-align: center;"><span>Product 1</span><br><br>
-          MPR - Rs Price <span></span><br>
-
-
-         </p></b>
-         <a href=""><button>Buy Now</button></a>
-        </div>
-         <div style="border:solid 1px #aaa;width: 250px ; height: 350px; margin: 35px;float:left; text-align: center;">
-               <img src={{ url_for('static', filename="images/shirt1.jpeg") }} width="250px" height="200px" >
-         <br>
-         <b><p style="font-family: sans-serif; text-align: center;"><span>Product 1</span><br><br>
-          MPR - Rs Price <span></span><br>
-
-
-         </p></b>
-         <a href=""><button>Buy Now</button></a>
-        </div>
-         <div style="border:solid 1px #aaa;width: 250px ; height: 350px; margin: 35px;float:left; text-align: center;">
-               <img src={{ url_for('static', filename="images/shirt1.jpeg") }} width="250px" height="200px" >
-         <br>
-         <b><p style="font-family: sans-serif; text-align: center;"><span>Product 1</span><br><br>
-          MPR - Rs Price <span></span><br>
-
-
-         </p></b>
-         <a href=""><button>Buy Now</button></a>
-        </div>
-         <div style="border:solid 1px #aaa;width: 250px ; height: 350px; margin: 35px;float:left; text-align: center;">
-               <img src={{ url_for('static', filename="images/shirt1.jpeg") }} width="250px" height="200px" >
-         <br>
-         <b><p style="font-family: sans-serif; text-align: center;"><span>Product 1</span><br><br>
-          MPR - Rs Price <span></span><br>
-
-
-         </p></b>
-         <a href=""><button>Buy Now</button></a>
-        </div>
-      
-                      
 </div>
-
-
 
 </body>
 <script type="text/javascript">
