@@ -178,5 +178,33 @@ def womenjumpsuit5():
 def womenjumpsuit6():
     return render_template("womenjumpsuit6.html")
 
+@app.route('/mentshirt')
+def mentshirt():
+    return render_template("mentshirt.html")
+
+@app.route('/mentshirt1')
+def mentshirt1():
+    return render_template("mentshirt1.html")
+
+@app.route('/mentshirt2')
+def mentshirt2():
+    return render_template("mentshirt2.html")
+
+@app.route('/mentshirt3')
+def mentshirt3():
+    return render_template("mentshirt3.html")
+
+@app.route('/mentshirt4')
+def mentshirt4():
+    return render_template("mentshirt4.html")
+
+@app.route('/mentshirt5')
+def mentshirt5():
+    return render_template("mentshirt5.html")
+
+@app.route('/mentshirt6')
+def mentshirt6():
+    return render_template("mentshirt6.html")
+
 if __name__ == "__main__":
     app.run(debug=True)
