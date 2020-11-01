@@ -137,11 +137,6 @@ def menshirt5():
 
 
 
-
-@app.route('/mentshirt')
-def mentshirt():
-    return render_template("mentshirt.html")
-
 @app.route('/women')
 def women():
     return render_template("women.html")
