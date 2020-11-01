@@ -2,18 +2,18 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Hamro Store</title>
-<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
-<link href="css/style.css" rel='stylesheet' type='text/css' />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<script src="js/jquery.min.js"></script>
+	<title>MyntraHack</title>
+	<link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel='stylesheet' type='text/css' />
+	<link href="{{ url_for('static', filename='css/style.css') }}" rel='stylesheet' type='text/css' />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
 
-<link rel="stylesheet" href="css/fwslider.css" media="all">
-<script src="js/jquery-ui.min.js"></script>
-<script src="js/fwslider.js"></script>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/fwslider.css') }}" media="all">
+	<script src="{{ url_for('static', filename='js/jquery-ui.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/fwslider.js') }}"></script>
 
 
 </head>
@@ -24,33 +24,33 @@
 			  <div class="col-md-12">
 				 <div class="header-left">
 					 <div class="logo">
-						<a href="index.html"><img src="images/logo1.png" width="125px" height="50px" alt=""/></a>
+						<a href={{ url_for('index') }}><img src={{ url_for('static', filename="images/logo1.png") }} width="50px" height="50px" alt=""/></a>
 					 </div>
-					 						
+
 	    		    <div class="clear"></div>
 	    	    </div>
-	            
+
 	      </div>
 		 </div>
 	    </div>
 	</div>
 	<div style="text-align: center;margin-top: 5%">
-		<img src="images/weather.png" width="100px" height="100px">
+		<img src={{ url_for('static', filename="images/weather.png") }} width="100px" height="100px">
 		<h3><b>Do you intend to wear it in extreme weather conditions?</b></h3>
 		<br>
 
-		<a href="menjackets3.html" style="background-color: white;padding-left: 50px;padding-right: 50px;;margin-left: -5px;border-radius: 12px;margin-right: 10px;border: solid 2px black;color: black;text-decoration: none;"><b>Yes</b></a>
-		<a href="menjackets3.html" style="background-color: white;padding-left: 50px;padding-right: 50px;;margin-left: -5px;border-radius: 12px;margin-right: 10px;border: solid 2px black;color: black;text-decoration: none;"><b>No</b></a>
+		<a href={{ url_for('menjackets3') }} style="background-color: white;padding-left: 50px;padding-right: 50px;;margin-left: -5px;border-radius: 12px;margin-right: 10px;border: solid 2px black;color: black;text-decoration: none;"><b>Yes</b></a>
+		<a href={{ url_for('menjackets3') }} style="background-color: white;padding-left: 50px;padding-right: 50px;;margin-left: -5px;border-radius: 12px;margin-right: 10px;border: solid 2px black;color: black;text-decoration: none;"><b>No</b></a>
 
 
 
-		
+
 	</div>
-	
-      
-	  
-	
-	
-		
-</body>	
+
+
+
+
+
+
+</body>
 </html>
