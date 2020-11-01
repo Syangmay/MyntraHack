@@ -3,6 +3,12 @@ from flask import Flask, request, render_template, render_template_string
 import pandas as pd
 
 
+mjackets = {}
+mjeans = {}
+mshirts = {}
+mtshirts = {}
+
+
 app = Flask(__name__)
 
 @app.route('/')
@@ -26,53 +32,79 @@ def men():
 
 
 
-@app.route('/menjackets')
+@app.route('/menjackets', methods=['get','post'])
 def menjackets():
-    return render_template("menjackets.html")
+    return render_template("menjackets.html", attr = [], count = [])
 
-@app.route('/menjackets2')
+@app.route('/menjackets2', methods=['get','post'])
 def menjackets2():
-    return render_template("menjackets2.html")
+    attr = []
+    count = []
+    return render_template("menjackets2.html", attr = attr, count = count)
 
-@app.route('/menjackets3')
+@app.route('/menjackets3', methods=['get','post'])
 def menjackets3():
-    return render_template("menjackets3.html")
+    if request.method == 'POST':
+        gender = request.form.get('gender')
+        print(gender)
+    attr = []
+    count = []
+    return render_template("menjackets3.html", attr = attr, count = count)
 
 @app.route('/menjackets4')
 def menjackets4():
-    return render_template("menjackets4.html")
+    attr = []
+    count = []
+    return render_template("menjackets4.html", attr = attr, count = count)
 
 @app.route('/menjackets5')
 def menjackets5():
+    attr = []
+    count = []
     return render_template("menjackets5.html")
 
 @app.route('/menjackets6')
 def menjackets6():
+    attr = []
+    count = []
     return render_template("menjackets6.html")
 
 @app.route('/menjackets7')
 def menjackets7():
+    attr = []
+    count = []
     return render_template("menjackets7.html")
 
 @app.route('/menjackets8')
 def menjackets8():
+    attr = []
+    count = []
     return render_template("menjackets8.html")
 
 @app.route('/menjackets9')
 def menjackets9():
+    attr = []
+    count = []
     return render_template("menjackets9.html")
 
 @app.route('/menjackets10')
 def menjackets10():
+    attr = []
+    count = []
     return render_template("menjackets10.html")
 
 @app.route('/bodytype')
 def bodytype():
+    attr = []
+    count = []
     return render_template("bodytype.html")
 
 @app.route('/end')
 def end():
+    attr = []
+    count = []
     return render_template("end.html")
+
 
 
 
