@@ -1,0 +1,65 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Hamro Store</title>
+<link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel='stylesheet' type='text/css' />
+<link href="{{ url_for('static', filename='css/style.css') }}" rel='stylesheet' type='text/css' />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/fwslider.css') }}" media="all">
+<script src="{{ url_for('static', filename='js/jquery-ui.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/fwslider.js') }}"></script>
+
+
+</head>
+<body>
+	<div class="header">
+		<div class="container">
+			<div class="row">
+			  <div class="col-md-12">
+				 <div class="header-left">
+					 <div class="logo">
+						<a href="index.html"><img src={{ url_for('static', filename="images/logo1.png") }} width="125px" height="50px" alt=""/></a>
+					 </div>
+
+	    		    <div class="clear"></div>
+	    	    </div>
+
+	      </div>
+		 </div>
+	    </div>
+	</div>
+	<div style="text-align: center;margin-top: 8%">
+		<h3><b>Which Sleeve lengths would you prefer the most?</b></h3>
+		<br>
+		<br>
+		<figure>
+			<img src={{ url_for('static', filename="images/sleeve1.png") }} width="150px" height="250px">
+			<img src={{ url_for('static', filename="images/sleeve2.png") }}  width="150px" height="250px">
+			<img src={{ url_for('static', filename="images/sleeve3.png") }}  width="150px" height="250px">
+			<img src={{ url_for('static', filename="images/sleeve4.png") }}  width="125px" height="250px">
+
+		</figure>
+		<a href={{ url_for('womenjumpsuit5') }} style="background-color: white;padding-left: 50px;padding-right: 50px;border-radius: 12px;margin-right: 10px;border: solid 2px black;color: black;text-decoration: none;">Sleeve</a>		
+		
+		<a href={{ url_for('womenjumpsuit5') }} style="background-color: white;padding-left: 55px;padding-right: 55px;border-radius: 12px;margin-right: 10px;border: solid 2px black;color: black;text-decoration: none;">Sleeve</a>
+		
+		<a href={{ url_for('womenjumpsuit5') }} style="background-color: white;padding-left: 50px;padding-right: 50px;border-radius: 12px;margin-left: 10px;border: solid 2px black;color: black;text-decoration: none;">Sleeve</a>
+
+		<a href={{ url_for('womenjumpsuit5') }} style="background-color: white;padding-left: 50px;padding-right: 50px;border-radius: 12px;margin-left: 10px;border: solid 2px black;color: black;text-decoration: none;">Sleeve</a>
+		<br><br>
+		
+		
+		
+		<br><br>
+
+	</div>
+
+
+</body>
+</html>
