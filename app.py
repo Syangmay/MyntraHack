@@ -21,5 +21,25 @@ def gender():
 def men():
     return render_template("men.html")
 
+@app.route('/menjackets')
+def menjackets():
+    return render_template("menjackets.html")
+
+@app.route('/menjeans')
+def menjeans():
+    return render_template("menjeans.html")
+
+@app.route('/menshirt')
+def menshirt():
+    return render_template("menshirt.html")
+
+@app.route('/mentshirt')
+def mentshirt():
+    return render_template("mentshirt.html")
+
+@app.route('/women')
+def women():
+    return render_template("women.html")
+
 if __name__ == "__main__":
     app.run(debug=True)
