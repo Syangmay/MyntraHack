@@ -36,10 +36,35 @@ def men():
 
 @app.route('/menjackets', methods=['get','post'])
 def menjackets():
+
     return render_template("menjackets.html")
 
 @app.route('/menjackets2', methods=['get','post'])
 def menjackets2():
+    if request.method == 'POST':
+        images = request.form.getlist('image[]')
+        print(images)
+        attribute = []
+        if "jacket1" in images:
+            attribute.append("Leather")
+        if "jacket2" in images:
+            attribute.append("Puffer")
+            attribute.append("Padded")
+        if "jacket3" in images:
+            attribute.append("Denim")
+        if "jacket4" in images:
+            attribute.append("Tailored")
+        if "jacket5" in images:
+            attribute.append("Bomber")
+            attribute.append("Biker")
+        if "jacket6" in images:
+            attribute.append("Sporty")
+
+        for i in range(len(attribute)):
+            if attribute[i] not in jackets:
+                jackets.append(attribute[i])
+            jacketcount[jackets.index(attribute[i])] += 1
+
     return render_template("menjackets2.html")
 
 @app.route('/menjackets3', methods=['get','post'])
@@ -128,6 +153,16 @@ def menjackets6():
 
 @app.route('/menjackets7', methods=['get','post'])
 def menjackets7():
+
+
+    return render_template("menjackets7.html")
+
+@app.route('/menjackets8', methods=['get','post'])
+def menjackets8():
+    return render_template("menjackets8.html")
+
+@app.route('/menjackets9', methods=['get','post'])
+def menjackets9():
     if request.method == 'POST':
         formal = request.form.get('formal')
 
@@ -140,19 +175,6 @@ def menjackets7():
         print("daily:")
         print(jackets)
         print(jacketcount)
-
-    return render_template("menjackets7.html")
-
-@app.route('/menjackets8', methods=['get','post'])
-def menjackets8():
-    attr = []
-    count = []
-    return render_template("menjackets8.html")
-
-@app.route('/menjackets9', methods=['get','post'])
-def menjackets9():
-    attr = []
-    count = []
     return render_template("menjackets9.html")
 
 @app.route('/menjackets10', methods=['get','post'])
@@ -194,6 +216,10 @@ def end():
     attr = []
     count = []
     return render_template("end.html")
+
+
+
+
 
 
 @app.route('/menjeans')
