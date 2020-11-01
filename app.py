@@ -178,12 +178,11 @@ def bodytype():
         if pockets == "lots" :
             if "Pockets" not in jackets:
                 jackets.append("Pockets")
-            jacketcount[jackets.index(attributes[i])] += 2
+            jacketcount[jackets.index("Pockets")] += 2
         elif pockets=="few":
-            for i in range(len(attributes)):
-                if attributes[i] not in jackets:
-                    jackets.append(attributes[i])
-                jacketcount[jackets.index(attributes[i])] += 1
+            if "Pockets" not in jackets:
+                jackets.append("Pockets")
+            jacketcount[jackets.index("Pockets")] += 1
 
     print("pockets:")
     print(jackets)
@@ -195,8 +194,6 @@ def end():
     attr = []
     count = []
     return render_template("end.html")
-
-
 
 
 @app.route('/menjeans')

@@ -37,14 +37,14 @@
 
 	<form method="POST" action = "{{ url_for('menjackets10')}}">
 	<div class = "form-group" style="width:60%; text-align: center;margin-top: 5%; margin-left:20%; margin-right:50%">
-		<img src=src={{ url_for('static', filename="images/wine.png") }} width="100px" height="100px">
-		<h3><b>Do you intend to wear it in extreme weather conditions?</b></h3>
+		<img src={{ url_for('static', filename="images/wine.png") }} width="100px" height="100px">
+		<h3><b>What do you prefer?</b></h3>
 		<br>
 
 
 		<div class="radio" style="margin-left:10%; padding-right:-400px; "checked>
-        <label><input type="radio" name="prefer" value="zipped"><b>Zipped</b></label><br>
-				<label><input type="radio" name="prefer" value="button"><b>Button</b></label>
+        <label><input type="radio" name="prefer" value="Zipped"><b>Zipped</b></label><br>
+				<label><input type="radio" name="prefer" value="Button"><b>Button</b></label>
     </div>
 
 		<br>
