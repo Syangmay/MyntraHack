@@ -34,25 +34,27 @@
 		 </div>
 	    </div>
 	</div>
-	<div style="text-align: center;margin-top: 5%">
-		<img src={{ url_for('static', filename="images/wine.png") }} width="200px" height="100px">
+
+	<form method="POST" action = "{{ url_for('menjackets10')}}">
+	<div class = "form-group" style="width:60%; text-align: center;margin-top: 5%; margin-left:20%; margin-right:50%">
+		<img src=src={{ url_for('static', filename="images/wine.png") }} width="100px" height="100px">
+		<h3><b>Do you intend to wear it in extreme weather conditions?</b></h3>
 		<br>
+
+
+		<div class="radio" style="margin-left:10%; padding-right:-400px; "checked>
+        <label><input type="radio" name="prefer" value="zipped"><b>Zipped</b></label><br>
+				<label><input type="radio" name="prefer" value="button"><b>Button</b></label>
+    </div>
+
 		<br>
-		<h3><b>What would you prefer more?</b></h3>
-		<br>
-		<a href={{ url_for('menjackets10') }} style="background-color: white;padding-left: 50px;padding-right: 50px;;margin-left: -5px;border-radius: 12px;margin-right: 10px;border: solid 2px black;color: black;text-decoration: none;"><b>Zipped</b></a>
-		<a href={{ url_for('menjackets10') }} style="background-color: white;padding-left: 50px;padding-right: 50px;;margin-left: -5px;border-radius: 12px;margin-right: 10px;border: solid 2px black;color: black;text-decoration: none;"><b>Button</b></a>
 
-
-
-
-
-
-
-
+		<input class="btn btn-primary" type="submit" value="submit">
 
 
 	</div>
+ </form>
+
 
 
 

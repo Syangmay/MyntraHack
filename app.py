@@ -128,8 +128,19 @@ def menjackets6():
 
 @app.route('/menjackets7')
 def menjackets7():
-    attr = []
-    count = []
+    if request.method == 'POST':
+        formal = request.form.get('formal')
+
+        if formal == "yes" :
+            attributes = ["Puffer", "Padded", "Bomber"]
+            for i in range(len(attributes)):
+                if attributes[i] not in jackets:
+                    jackets.append(attributes[i])
+                jacketcount[jackets.index(attributes[i])] += 1
+        print("daily:")
+        print(jackets)
+        print(jacketcount)
+
     return render_template("menjackets7.html")
 
 @app.route('/menjackets8')
@@ -146,8 +157,16 @@ def menjackets9():
 
 @app.route('/menjackets10')
 def menjackets10():
-    attr = []
-    count = []
+    if request.method == 'POST':
+        closure = request.form.get('prefer')
+
+        if closure not in jackets:
+            jackets.append(closure)
+        jacketcount[jackets.index(closure)] += 1
+
+        print("closure:")
+        print(jackets)
+        print(jacketcount)
     return render_template("menjackets10.html")
 
 @app.route('/bodytype')
